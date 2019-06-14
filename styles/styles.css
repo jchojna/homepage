@@ -1,0 +1,117 @@
+/*
+##     ##    ###    ########  ####    ###    ########  ##       ########  ######
+##     ##   ## ##   ##     ##  ##    ## ##   ##     ## ##       ##       ##    ##
+##     ##  ##   ##  ##     ##  ##   ##   ##  ##     ## ##       ##       ##
+##     ## ##     ## ########   ##  ##     ## ########  ##       ######    ######
+ ##   ##  ######### ##   ##    ##  ######### ##     ## ##       ##             ##
+  ## ##   ##     ## ##    ##   ##  ##     ## ##     ## ##       ##       ##    ##
+   ###    ##     ## ##     ## #### ##     ## ########  ######## ########  ######
+*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.header {
+  background-color: #60d2d6;
+  margin-top: 6rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.header .header__heading {
+  margin-bottom: 1.2rem;
+  font-size: 3rem;
+}
+
+.nav {
+  margin-top: 1rem;
+  max-width: 800px;
+  font-size: 1rem;
+}
+
+.nav .nav__link {
+  color: #60d2d6;
+  text-decoration: none;
+}
+
+.nav .nav__link :hover {
+  color: #89dde0;
+}
+
+.nav .nav__link--hidden {
+  visibility: hidden;
+}
+
+.nav .nav__heading {
+  display: inline-block;
+  color: #60d2d6;
+  font-size: 1.5rem;
+}
+
+.nav .fas {
+  vertical-align: bottom;
+}
+
+.quote {
+  text-align: center;
+  margin: 6rem auto 0;
+  background-color: #fcdea8;
+  padding: 3rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+}
+
+.quote__heading,
+.quote__text {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.quote__text {
+  color: #60d2d6;
+}
+
+.quote__author {
+  text-align: right;
+  font-size: 1rem;
+}
+
+.fa-quote-right {
+  vertical-align: top;
+}
+
+/*
+##     ## ######## ########  ####    ###       ##     ## ########
+###   ### ##       ##     ##  ##    ## ##      ###   ### ##     ##
+#### #### ##       ##     ##  ##   ##   ##     #### #### ##     ##
+## ### ## ######   ##     ##  ##  ##     ##    ## ### ## ##     ##
+##     ## ##       ##     ##  ##  #########    ##     ## ##     ##
+##     ## ##       ##     ##  ##  ##     ##    ##     ## ##     ##
+##     ## ######## ########  #### ##     ##    ##     ## ########
+*/
+/*
+##     ## ######## ########  ####    ###       ##        ######
+###   ### ##       ##     ##  ##    ## ##      ##       ##    ##
+#### #### ##       ##     ##  ##   ##   ##     ##       ##
+## ### ## ######   ##     ##  ##  ##     ##    ##       ##   ####
+##     ## ##       ##     ##  ##  #########    ##       ##    ##
+##     ## ##       ##     ##  ##  ##     ##    ##       ##    ##
+##     ## ######## ########  #### ##     ##    ########  ######
+*/
+/*# sourceMappingURL=styles.css.map */
