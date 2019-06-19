@@ -1,0 +1,215 @@
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  background: url("../img/01.JPG");
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+}
+
+.header {
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.header .header__heading {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.nav {
+  margin-top: 1rem;
+  max-width: 800px;
+  font-size: 1rem;
+}
+
+.nav .nav__list {
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav__link,
+.nav .nav__day {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+}
+
+.nav .nav__link {
+  text-decoration: none;
+  width: 40px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav .nav__link:hover {
+  color: #60d2d6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav .nav__link--hidden {
+  visibility: hidden;
+}
+
+.nav .nav__day {
+  font-weight: 600;
+  margin: 0 1rem;
+}
+
+.nav .fas {
+  font-size: 2rem;
+}
+
+.quote {
+  text-align: center;
+  padding: 3rem;
+}
+
+.quote .quote__blockquote {
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+}
+
+.quote .quote__heading,
+.quote .quote__text {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.quote .quote__heading {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.quote .quote__text {
+  color: #60d2d6;
+  margin-bottom: 2rem;
+}
+
+.quote .quote__author {
+  text-align: right;
+  font-size: 1rem;
+}
+
+.quote .fa-quote-right {
+  vertical-align: top;
+}
+
+/*
+##     ## ######## ########  ####    ###       ##     ## ########
+###   ### ##       ##     ##  ##    ## ##      ###   ### ##     ##
+#### #### ##       ##     ##  ##   ##   ##     #### #### ##     ##
+## ### ## ######   ##     ##  ##  ##     ##    ## ### ## ##     ##
+##     ## ##       ##     ##  ##  #########    ##     ## ##     ##
+##     ## ##       ##     ##  ##  ##     ##    ##     ## ##     ##
+##     ## ######## ########  #### ##     ##    ##     ## ########
+*/
+/*
+##     ## ######## ########  ####    ###       ##        ######
+###   ### ##       ##     ##  ##    ## ##      ##       ##    ##
+#### #### ##       ##     ##  ##   ##   ##     ##       ##
+## ### ## ######   ##     ##  ##  ##     ##    ##       ##   ####
+##     ## ##       ##     ##  ##  #########    ##       ##    ##
+##     ## ##       ##     ##  ##  ##     ##    ##       ##    ##
+##     ## ######## ########  #### ##     ##    ########  ######
+*/
+/*# sourceMappingURL=styles.css.map */
