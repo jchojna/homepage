@@ -11,8 +11,11 @@
 
   <link rel="stylesheet" type="text/css" href="/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  
 </head>
 <body>
+  <div class="page-overlay page-overlay--onload"></div>
+
   <section class="container container--1">
     <!-- MAIN HEADER -->
     <header class="header">
@@ -23,7 +26,7 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav_item">
-            <a href="index.html" class="nav__link nav__link--hidden">
+            <a href="index.html" class="nav__link nav__link--hidden nav__link--js">
               <i class="fas fa-angle-left"></i>
             </a>
           </li>
@@ -31,7 +34,7 @@
             <span class="nav__day">Day 1 - Tuesday - 11.06.2019</span>
           </li>
           <li class="nav_item">
-            <a href="quotes/quote_02.html" class="nav__link">
+            <a href="quotes/quote_02.html" class="nav__link nav__link--js">
               <i class="fas fa-angle-right"></i>
             </a>
           </li>
@@ -66,5 +69,7 @@
       </p>
     </footer> <!-- END OF FOOTER -->
   </section>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
