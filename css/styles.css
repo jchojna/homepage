@@ -303,6 +303,10 @@ body {
   font-size: 3rem;
 }
 
+.header__description {
+  line-height: 1.5;
+}
+
 .nav {
   margin-top: 1rem;
   max-width: 1000px;
