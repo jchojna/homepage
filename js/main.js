@@ -16,15 +16,13 @@ const delayLink = (element) => {
   window.location = element.href;
 }
 
-const addWelcomeText = () => {
-  const name = 'Jakub';
-  const surname = 'Chojna';
-  const welcome = `Great to see you here, ${name} ${surname}! <br>`
+const addWelcomeText = (firstName, lastName) => {
+  const welcome = `Great to see you here, ${firstName} ${lastName}! <br>`
 
   headerDescription.innerHTML = welcome + headerDescription.innerHTML;
 }
 
-addWelcomeText();
+addWelcomeText('Jakub', 'Chojna');
 
 window.onload = () => {
   fadeIn();
