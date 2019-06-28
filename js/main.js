@@ -1,6 +1,6 @@
-const navigationLinks = document.querySelectorAll('.nav__link');
-const pageOverlay = document.querySelector('.page-overlay');
-const headerDescription = document.querySelector('.header__description');
+const navigationLinks = document.querySelectorAll('.nav__link--js');
+const pageOverlay = document.querySelector('.page-overlay--js');
+const headerDescription = document.querySelector('.header__description--js');
 
 function fadeIn() {
   pageOverlay.classList.remove('page-overlay--onload');

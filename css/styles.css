@@ -78,6 +78,11 @@ body {
   font-size: 1rem;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .page-overlay {
   position: fixed;
   top: 0;
@@ -130,164 +135,164 @@ body {
 }
 
 .container--1 {
-  background: url("../img/1.JPG");
+  background: url("../img/1.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--2 {
-  background: url("../img/2.JPG");
+  background: url("../img/2.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--3 {
-  background: url("../img/3.JPG");
+  background: url("../img/3.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--4 {
-  background: url("../img/4.JPG");
+  background: url("../img/4.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--5 {
-  background: url("../img/5.JPG");
+  background: url("../img/5.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--6 {
-  background: url("../img/6.JPG");
+  background: url("../img/6.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--7 {
-  background: url("../img/7.JPG");
+  background: url("../img/7.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--8 {
-  background: url("../img/8.JPG");
+  background: url("../img/8.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--9 {
-  background: url("../img/9.JPG");
+  background: url("../img/9.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--10 {
-  background: url("../img/10.JPG");
+  background: url("../img/10.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--11 {
-  background: url("../img/11.JPG");
+  background: url("../img/11.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--12 {
-  background: url("../img/12.JPG");
+  background: url("../img/12.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--13 {
-  background: url("../img/13.JPG");
+  background: url("../img/13.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--14 {
-  background: url("../img/14.JPG");
+  background: url("../img/14.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--15 {
-  background: url("../img/15.JPG");
+  background: url("../img/15.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--16 {
-  background: url("../img/16.JPG");
+  background: url("../img/16.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--17 {
-  background: url("../img/17.JPG");
+  background: url("../img/17.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--18 {
-  background: url("../img/18.JPG");
+  background: url("../img/18.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--19 {
-  background: url("../img/19.JPG");
+  background: url("../img/19.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--20 {
-  background: url("../img/20.JPG");
+  background: url("../img/20.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--21 {
-  background: url("../img/21.JPG");
+  background: url("../img/21.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--22 {
-  background: url("../img/22.JPG");
+  background: url("../img/22.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--23 {
-  background: url("../img/23.JPG");
+  background: url("../img/23.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--24 {
-  background: url("../img/24.JPG");
+  background: url("../img/24.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--25 {
-  background: url("../img/25.JPG");
+  background: url("../img/25.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .container--26 {
-  background: url("../img/26.JPG");
+  background: url("../img/26.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .header {
   border-radius: 1rem;
-  text-align: center;
+  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,6 +300,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+.header__container {
+  max-width: 70%;
 }
 
 .header__heading {
@@ -330,6 +340,7 @@ body {
 .nav__list {
   padding: 0;
   list-style: none;
+  display: none;
 }
 
 .nav__link,
@@ -365,6 +376,30 @@ body {
 .fas {
   font-size: 3rem;
   pointer-events: none;
+}
+
+.nav__burger-button {
+  position: fixed;
+  top: 25px;
+  right: 40px;
+  width: 100px;
+  height: 100px;
+  background: url(../assets/burger-button.svg) no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.nav__burger-button:hover {
+  -webkit-transform: scale(1.3) rotate(15deg);
+          transform: scale(1.3) rotate(15deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .quote {
@@ -415,13 +450,13 @@ body {
 }
 
 /*
-##     ## ######## ########  ####    ###       ##     ## ########
-###   ### ##       ##     ##  ##    ## ##      ###   ### ##     ##
-#### #### ##       ##     ##  ##   ##   ##     #### #### ##     ##
-## ### ## ######   ##     ##  ##  ##     ##    ## ### ## ##     ##
-##     ## ##       ##     ##  ##  #########    ##     ## ##     ##
-##     ## ##       ##     ##  ##  ##     ##    ##     ## ##     ##
-##     ## ######## ########  #### ##     ##    ##     ## ########
+########    ###    ########  ##       ######## ########
+   ##      ## ##   ##     ## ##       ##          ##
+   ##     ##   ##  ##     ## ##       ##          ##
+   ##    ##     ## ########  ##       ######      ##
+   ##    ######### ##     ## ##       ##          ##
+   ##    ##     ## ##     ## ##       ##          ##
+   ##    ##     ## ########  ######## ########    ##
 */
 @media only screen and (min-width: 768px) {
   .header {
@@ -438,7 +473,17 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    text-align: left;
+  }
+  .header__container {
+    max-width: none;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__burger-button {
+    display: none;
   }
   .quote__heading {
     font-size: 4rem;
@@ -454,12 +499,12 @@ body {
 }
 
 /*
-##     ## ######## ########  ####    ###       ##        ######
-###   ### ##       ##     ##  ##    ## ##      ##       ##    ##
-#### #### ##       ##     ##  ##   ##   ##     ##       ##
-## ### ## ######   ##     ##  ##  ##     ##    ##       ##   ####
-##     ## ##       ##     ##  ##  #########    ##       ##    ##
-##     ## ##       ##     ##  ##  ##     ##    ##       ##    ##
-##     ## ######## ########  #### ##     ##    ########  ######
+########  ########  ######  ##    ## ########  #######  ########
+##     ## ##       ##    ## ##   ##     ##    ##     ## ##     ##
+##     ## ##       ##       ##  ##      ##    ##     ## ##     ##
+##     ## ######    ######  #####       ##    ##     ## ########
+##     ## ##             ## ##  ##      ##    ##     ## ##
+##     ## ##       ##    ## ##   ##     ##    ##     ## ##
+########  ########  ######  ##    ##    ##     #######  ##
 */
 /*# sourceMappingURL=styles.css.map */
