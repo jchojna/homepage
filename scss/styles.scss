@@ -74,12 +74,12 @@ button {
 
 @for $i from 1 to 27 {
   .container--#{$i} {
-    background: url("../img/#{$i}.JPG");
+    background: url("../img/#{$i}.jpeg");
     background-position: center center;
     background-size: cover;
   }
   .nav__link--grid-#{$i} {
-    background: url("../img/#{$i}.JPG");
+    background: url("../img/#{$i}.jpeg");
     background-position: center center;
     background-size: cover;
   }
