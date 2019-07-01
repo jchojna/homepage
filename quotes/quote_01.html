@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> 
 
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
   
 </head>
 <body>
@@ -26,7 +26,7 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="quote_01.html" class="nav__link nav__link--hidden nav__link--js">
+            <a href="quote_01.html" class="nav__link nav__link--icon nav__link--hidden nav__link--js">
               <i class="fas fa-angle-left"></i>
             </a>
           </li>
@@ -34,12 +34,23 @@
             <span class="nav__day">Day 1 - Tuesday - 11.06.2019</span>
           </li>
           <li class="nav__item">
-            <a href="quote_02.html" class="nav__link nav__link--js">
+            <a href="quote_02.html" class="nav__link nav__link--icon nav__link--js">
               <i class="fas fa-angle-right"></i>
             </a>
           </li>
         </ul>
-        <button class="button nav__burger-button nav__burger-button--js"></button>
+        <ul class="nav__list nav__list--grid nav__list--grid-js">
+          <li class="nav__item nav__item--grid nav__item--grid-random">
+            <a href="#" class="nav__link nav__link--grid nav__link--grid-random nav__link--js">random</a>
+          </li>
+          <li class="nav__item nav__item--grid">
+            <a href="../index.html" class="nav__link nav__link--grid nav__link--grid-menu nav__link--js">main menu</a>
+          </li>
+        </ul>
+        <button class="button nav__burger-button nav__burger-button--js">
+          <img src="../assets/burger-button-upper.svg" class="burger-button__upper burger-button__upper--js" alt="burger upper part">
+          <img src="../assets/burger-button-bottom.svg" class="burger-button__bottom burger-button__bottom--js" alt="burger bottom part">
+        </button>
       </nav>
     </header> <!-- END OF MAIN HEADER -->
 
@@ -71,6 +82,6 @@
     </footer> <!-- END OF FOOTER -->
   </section>
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

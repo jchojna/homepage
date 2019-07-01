@@ -92,7 +92,7 @@ button {
   right: 0;
   bottom: 0;
   background-color: #000;
-  z-index: 1;
+  z-index: 99;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0s 0.5s, opacity 0.5s;
@@ -108,13 +108,6 @@ button {
 .page-overlay--visible {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: visibility 0s, opacity 0.5s;
-  transition: visibility 0s, opacity 0.5s;
-}
-
-.page-overlay--mobile-menu {
-  visibility: visible;
-  opacity: 0.65;
   -webkit-transition: visibility 0s, opacity 0.5s;
   transition: visibility 0s, opacity 0.5s;
 }
@@ -151,7 +144,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-1 {
+  background: url("../img/1.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--2 {
+  background: url("../img/2.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-2 {
   background: url("../img/2.JPG");
   background-position: center center;
   background-size: cover;
@@ -163,7 +168,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-3 {
+  background: url("../img/3.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--4 {
+  background: url("../img/4.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-4 {
   background: url("../img/4.JPG");
   background-position: center center;
   background-size: cover;
@@ -175,7 +192,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-5 {
+  background: url("../img/5.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--6 {
+  background: url("../img/6.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-6 {
   background: url("../img/6.JPG");
   background-position: center center;
   background-size: cover;
@@ -187,7 +216,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-7 {
+  background: url("../img/7.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--8 {
+  background: url("../img/8.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-8 {
   background: url("../img/8.JPG");
   background-position: center center;
   background-size: cover;
@@ -199,7 +240,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-9 {
+  background: url("../img/9.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--10 {
+  background: url("../img/10.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-10 {
   background: url("../img/10.JPG");
   background-position: center center;
   background-size: cover;
@@ -211,7 +264,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-11 {
+  background: url("../img/11.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--12 {
+  background: url("../img/12.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-12 {
   background: url("../img/12.JPG");
   background-position: center center;
   background-size: cover;
@@ -223,7 +288,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-13 {
+  background: url("../img/13.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--14 {
+  background: url("../img/14.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-14 {
   background: url("../img/14.JPG");
   background-position: center center;
   background-size: cover;
@@ -235,7 +312,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-15 {
+  background: url("../img/15.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--16 {
+  background: url("../img/16.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-16 {
   background: url("../img/16.JPG");
   background-position: center center;
   background-size: cover;
@@ -247,7 +336,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-17 {
+  background: url("../img/17.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--18 {
+  background: url("../img/18.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-18 {
   background: url("../img/18.JPG");
   background-position: center center;
   background-size: cover;
@@ -259,7 +360,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-19 {
+  background: url("../img/19.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--20 {
+  background: url("../img/20.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-20 {
   background: url("../img/20.JPG");
   background-position: center center;
   background-size: cover;
@@ -271,7 +384,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-21 {
+  background: url("../img/21.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--22 {
+  background: url("../img/22.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-22 {
   background: url("../img/22.JPG");
   background-position: center center;
   background-size: cover;
@@ -283,7 +408,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-23 {
+  background: url("../img/23.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--24 {
+  background: url("../img/24.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-24 {
   background: url("../img/24.JPG");
   background-position: center center;
   background-size: cover;
@@ -295,7 +432,19 @@ button {
   background-size: cover;
 }
 
+.nav__link--grid-25 {
+  background: url("../img/25.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
 .container--26 {
+  background: url("../img/26.JPG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav__link--grid-26 {
   background: url("../img/26.JPG");
   background-position: center center;
   background-size: cover;
@@ -337,7 +486,18 @@ button {
 }
 
 .header__container--grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: none;
+  height: 100%;
 }
 
 .header__heading {
@@ -371,16 +531,64 @@ button {
 
 .nav__list {
   list-style: none;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .nav__list--grid {
-  display: none;
+  display: -ms-grid;
+  display: grid;
+  padding: 150px 50px;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px 10px;
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  background: #fff;
+  background: linear-gradient(45deg, #dfd12f 0%, #60d2d6 100%);
+  -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s 0.5s, opacity 0.5s;
+  transition: visibility 0s 0.5s, opacity 0.5s;
 }
 
 .nav__list--grid-visible {
-  display: -ms-grid;
-  display: grid;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s, opacity 0.5s;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.nav__item--grid {
+  min-height: 60px;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.nav__item--grid-random {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .nav__link,
@@ -390,12 +598,35 @@ button {
 }
 
 .nav__link {
+  font-size: 2rem;
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.nav__link:hover {
+.nav__link--grid {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: saturate(0);
+          filter: saturate(0);
+}
+
+.nav__link--grid:hover {
+  -webkit-filter: saturate(1);
+          filter: saturate(1);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.nav__link--grid-random {
+  background-color: #60d2d6;
+}
+
+.nav__link--grid-menu {
+  background-color: #dfd12f;
+}
+
+.nav__link--icon:hover {
   color: #60d2d6;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -420,12 +651,10 @@ button {
 
 .nav__burger-button {
   position: fixed;
-  top: 25px;
+  top: 40px;
   right: 40px;
   width: 100px;
   height: 100px;
-  background: url(../assets/burger-button.svg) no-repeat;
-  background-position: center center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
@@ -442,6 +671,21 @@ button {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.burger-button__upper,
+.burger-button__upper--open {
+  -webkit-transform-origin: 5% 100%;
+          transform-origin: 5% 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.burger-button__upper--open {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
 }
 
 .quote {
@@ -493,6 +737,9 @@ button {
 
 .footer--grid {
   color: #60d2d6;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 /*
@@ -527,11 +774,14 @@ button {
   .header__container {
     max-width: none;
   }
-  .nav__list {
-    visibility: visible;
-  }
-  .nav__burger-button {
-    display: none;
+  .nav__list--grid {
+    min-height: 0;
+    max-width: 1280px;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 30px;
   }
   .quote__heading {
     font-size: 4rem;

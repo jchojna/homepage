@@ -1,8 +1,8 @@
-const navigationLinks = document.querySelectorAll('.nav__link--js');
 const pageOverlay = document.querySelector('.page-overlay--js');
 const headerDescription = document.querySelector('.header__description--js');
 const burgerButton = document.querySelector('.nav__burger-button--js');
 const navListGrid = document.querySelector('.nav__list--grid-js');
+const burgerButtonUpperPart = document.querySelector('.burger-button__upper--js');
 
 const mediaFirstBreakpoint = 768;
 
@@ -21,8 +21,8 @@ const delayLink = (element) => {
 }
 
 const handleMobileMenu = () => {
+  burgerButtonUpperPart.classList.toggle('burger-button__upper--open');
   navListGrid.classList.toggle('nav__list--grid-visible');
-  pageOverlay.classList.toggle('page-overlay--mobile-menu');
 }
 
 const make2DigitsNumber = (number) => {
@@ -33,25 +33,30 @@ const make2DigitsNumber = (number) => {
   }
 }
 
+const ifPageAddressContains = (string) => {
+  const currentPageAddress = window.location.toString();
+  return currentPageAddress.includes(string);
+}
+
 const generateMobileMenu = (parent) => {
+  let navItemGrid, navLinkGrid, currentNumber;
   for ( let i=1; i <= 26 ; i++ ) {
-    const navItemGrid = document.createElement('li');
-    const navLinkGrid = document.createElement('a');
-    const currentNumber = make2DigitsNumber(i);
+    navItemGrid = document.createElement('li');
+    navLinkGrid = document.createElement('a');
+    currentNumber = make2DigitsNumber(i);
     navItemGrid.className = "nav__item nav__item--grid";
-    navLinkGrid.className = "nav__link nav__link--grid";
+    navLinkGrid.className = `nav__link nav__link--grid nav__link--grid-${i} nav__link--js`;
     parent.appendChild(navItemGrid);
     navItemGrid.appendChild(navLinkGrid);
-    navLinkGrid.setAttribute('href', `quote_${currentNumber}.html`)
-    navLinkGrid.textContent = `Quote #${currentNumber}`;
+
+    if ( ifPageAddressContains('quotes') ) {
+      navLinkGrid.setAttribute('href', `quote_${currentNumber}.html`);
+    } else {
+      navLinkGrid.setAttribute('href', `quotes/quote_${currentNumber}.html`);
+    }
+    navLinkGrid.textContent = `#${currentNumber}`;
   }
 }
-
-const createArrayOfQuotes = () => {
-  const quotes = [];
-
-}
-
 
 
 
@@ -93,12 +98,13 @@ window.onload = () => {
 ########    ###    ######## ##    ##    ##     ######
 */
 
-for ( let i = 0; i < navigationLinks; i++ ) {
-  navigationLinks[i].addEventListener('click', () => transitionPage(event, delayLink, 500));
+burgerButton.addEventListener('click', handleMobileMenu);
+if ( navListGrid.children.length <= 2 ) {
+  generateMobileMenu(navListGrid);
 }
 
-burgerButton.addEventListener('click', handleMobileMenu);
 
-if ( navListGrid.children.length === 0 ) {
-  generateMobileMenu(navListGrid);
+const navigationLinks = document.querySelectorAll('.nav__link--js');
+for ( let i = 0; i < navigationLinks.length; i++ ) {
+  navigationLinks[i].addEventListener('click', () => transitionPage(event, delayLink, 500));
 }

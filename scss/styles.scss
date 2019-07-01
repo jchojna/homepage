@@ -40,7 +40,7 @@ button {
   right: 0;
   bottom: 0;
   background-color: #000;
-  z-index: 1;
+  z-index: 99;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 0.5s, opacity 0.5s;
@@ -56,12 +56,6 @@ button {
   visibility: visible;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s;
-}
-
-.page-overlay--mobile-menu {
-  visibility: visible;
-  opacity: 0.65;
-  transition: visibility 0s, opacity $time-mobile-menu;
 }
 
 .container {
@@ -80,6 +74,11 @@ button {
 
 @for $i from 1 to 27 {
   .container--#{$i} {
+    background: url("../img/#{$i}.JPG");
+    background-position: center center;
+    background-size: cover;
+  }
+  .nav__link--grid-#{$i} {
     background: url("../img/#{$i}.JPG");
     background-position: center center;
     background-size: cover;
@@ -108,7 +107,11 @@ button {
 }
 
 .header__container--grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: none;
+  height: 100%;
 }
 
 .header__heading {
@@ -122,6 +125,7 @@ button {
 }
 
 // NAVIGATION
+
 .nav {
   margin-top: 1rem;
   font-size: 1rem;
@@ -137,18 +141,57 @@ button {
 
 .nav__list {
   list-style: none;
-  display: none;
+  display: flex;
 }
 
 .nav__list--grid {
-  display: none;
+  display: grid;
+  padding: 150px 50px;
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  grid-gap: 10px 10px; 
+  justify-items: stretch;
+  align-items: stretch;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  background: #fff;
+  background: linear-gradient(45deg, $color-secondary 0%, rgba(96,210,214,1) 100%);
+  box-shadow: 0 0 0 1000px rgba(0,0,0,0.7);
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s $time-mobile-menu, opacity $time-mobile-menu;
 }
 
 .nav__list--grid-visible {
-  display: grid;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity $time-mobile-menu;
 }
 
 .nav__item {
+}
+
+.nav__item--grid {
+  min-height: 60px;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform $time-mobile-menu;
+}
+
+.nav__item--grid:hover {
+  
+  
+}
+
+.nav__item--grid-random {
+  order: 1;
 }
 
 .nav__link,
@@ -158,11 +201,31 @@ button {
 }
 
 .nav__link {
+  font-size: 2rem;
   text-decoration: none;
   transition: all 0.3s;
 }
 
-.nav__link:hover {
+.nav__link--grid {
+  height: 100%;
+  width: 100%;
+  filter: saturate(0);
+}
+
+.nav__link--grid:hover {
+  filter: saturate(1);
+  transform: scale(1.3);
+}
+
+.nav__link--grid-random {
+  background-color: $color-main;
+}
+
+.nav__link--grid-menu {
+  background-color: $color-secondary;
+}
+
+.nav__link--icon:hover {
   color: $color-main;
   transform: scale(1.5);
   transition: all 0.3s;
@@ -185,12 +248,10 @@ button {
 
 .nav__burger-button {
   position: fixed;
-  top: 25px;
+  top: 40px;
   right: 40px;
   width: 100px;
   height: 100px;
-  background: url(../assets/burger-button.svg) no-repeat;
-  background-position: center center;
   cursor: pointer;
   transition: transform 0.3s;
   z-index: 1;
@@ -200,6 +261,16 @@ button {
   color: $color-main;
   transform: scale(1.3) rotate(15deg);
   transition: transform 0.3s;
+}
+
+.burger-button__upper,
+.burger-button__upper--open {
+  transform-origin: 5% 100%;
+  transition: transform 0.5s;
+}
+
+.burger-button__upper--open {
+  transform: rotateZ(-45deg);
 }
 
 // QUOTE
@@ -252,6 +323,7 @@ button {
 
 .footer--grid {
   color: $color-main;
+  flex-grow: 0;
 }
 
 /*
@@ -265,6 +337,7 @@ button {
 */
 
 @media only screen and (min-width: $media-first-breakpoint) {
+
   .header {
     align-items: flex-start;
     align-self: stretch;
@@ -280,12 +353,14 @@ button {
     max-width: none;
   }
 
-  .nav__list {
-    visibility: visible;
-  }
-
-  .nav__burger-button {
-    display: none;
+  .nav__list--grid {
+    min-height: 0;
+    max-width: $media-second-breakpoint;
+    top: $layout-mobile-menu-margin;
+    left: $layout-mobile-menu-margin;
+    right: $layout-mobile-menu-margin;
+    bottom: $layout-mobile-menu-margin;
+    border-radius: 30px;
   }
 
   .quote__heading {
