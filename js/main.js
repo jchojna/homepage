@@ -3,8 +3,16 @@ const headerDescription = document.querySelector('.header__description--js');
 const burgerButton = document.querySelector('.nav__burger-button--js');
 const navListGrid = document.querySelector('.nav__list--grid-js');
 const burgerButtonUpperPart = document.querySelector('.burger-button__upper--js');
+const randomButton = document.querySelector('.nav__link--grid-random');
+
+const amountOfImages = 26;
 
 const mediaFirstBreakpoint = 768;
+
+const addWelcomeText = (firstName, lastName) => {
+  const welcome = `Great to see you here, ${firstName} ${lastName}! <br>`
+  headerDescription.innerHTML = welcome + headerDescription.innerHTML;
+}
 
 function fadeIn() {
   pageOverlay.classList.remove('page-overlay--onload');
@@ -40,7 +48,7 @@ const ifPageAddressContains = (string) => {
 
 const generateMobileMenu = (parent) => {
   let navItemGrid, navLinkGrid, currentNumber;
-  for ( let i=1; i <= 26 ; i++ ) {
+  for ( let i=1; i <= amountOfImages ; i++ ) {
     navItemGrid = document.createElement('li');
     navLinkGrid = document.createElement('a');
     currentNumber = make2DigitsNumber(i);
@@ -58,20 +66,14 @@ const generateMobileMenu = (parent) => {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const generateRandomUrl = (obj) => {
+  const randomNumber = make2DigitsNumber( Math.floor(Math.random() * amountOfImages) + 1 );
+  if ( ifPageAddressContains('quotes') ) {
+    obj.setAttribute('href', `quote_${randomNumber}.html`);
+  } else {
+    obj.setAttribute('href', `quotes/quote_${randomNumber}.html`);
+  }
+}
 
 /*
  ######     ###    ##       ##        ######
@@ -87,6 +89,8 @@ window.onload = () => {
   fadeIn();
 }
 
+addWelcomeText('Dear', 'Guest');
+generateRandomUrl(randomButton);
 
 /*
 ######## ##     ## ######## ##    ## ########  ######
