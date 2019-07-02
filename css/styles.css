@@ -463,6 +463,9 @@ button {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
 }
 
 .header--grid {
@@ -552,7 +555,7 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  min-height: 100vh;
+  bottom: 0;
   background: #fff;
   background: linear-gradient(45deg, #dfd12f 0%, #60d2d6 100%);
   -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7);
@@ -585,7 +588,8 @@ button {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.nav__item--grid-random {
+.nav__item--grid-random,
+.nav__item--grid-contact {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -622,7 +626,8 @@ button {
   background-color: #60d2d6;
 }
 
-.nav__link--grid-menu {
+.nav__link--grid-menu,
+.nav__link--grid-contact {
   background-color: #dfd12f;
 }
 
@@ -688,6 +693,15 @@ button {
           transform: rotateZ(-45deg);
 }
 
+/*
+ #######  ##     ##  #######  ######## ########
+##     ## ##     ## ##     ##    ##    ##
+##     ## ##     ## ##     ##    ##    ##
+##     ## ##     ## ##     ##    ##    ######
+##  ## ## ##     ## ##     ##    ##    ##
+##    ##  ##     ## ##     ##    ##    ##
+ ##### ##  #######   #######     ##    ########
+*/
 .quote {
   text-align: center;
 }
@@ -728,6 +742,15 @@ button {
   vertical-align: top;
 }
 
+/*
+########  #######   #######  ######## ######## ########
+##       ##     ## ##     ##    ##    ##       ##     ##
+##       ##     ## ##     ##    ##    ##       ##     ##
+######   ##     ## ##     ##    ##    ######   ########
+##       ##     ## ##     ##    ##    ##       ##   ##
+##       ##     ## ##     ##    ##    ##       ##    ##
+##        #######   #######     ##    ######## ##     ##
+*/
 .footer {
   padding: 1rem 0;
   text-align: center;
@@ -740,6 +763,103 @@ button {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+}
+
+/*
+########  #######  ########  ##     ##
+##       ##     ## ##     ## ###   ###
+##       ##     ## ##     ## #### ####
+######   ##     ## ########  ## ### ##
+##       ##     ## ##   ##   ##     ##
+##       ##     ## ##    ##  ##     ##
+##        #######  ##     ## ##     ##
+*/
+.form__container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.form__element {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.form__element--fieldset {
+  border: none;
+}
+
+.form__label,
+.form__legend {
+  text-align: center;
+}
+
+.form__legend {
+  display: block;
+}
+
+.form__input,
+.form__description {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  width: 100%;
+}
+
+.form__birthdate {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-columns: 1fr 1fr 2fr;
+      grid-template-columns: 1fr 1fr 2fr;
+}
+
+.form__radio-set {
+  display: -ms-grid;
+  display: grid;
+}
+
+.form__radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.form__input-radio {
+  margin: 1rem;
+}
+
+.form__submit-button {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  background-color: #dfd12f;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form__submit-button:hover {
+  background-color: #60d2d6;
 }
 
 /*
@@ -793,6 +913,28 @@ button {
   .footer {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+  .form__element {
+    -ms-grid-columns: 1fr 400px 1fr;
+        grid-template-columns: 1fr 400px 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form__radio-set {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .form__label {
+    text-align: right;
+  }
+  .form__submit-button {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
   }
 }
 

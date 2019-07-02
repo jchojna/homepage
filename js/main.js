@@ -103,7 +103,7 @@ generateRandomUrl(randomButton);
 */
 
 burgerButton.addEventListener('click', handleMobileMenu);
-if ( navListGrid.children.length <= 2 ) {
+if ( navListGrid.children.length <= 3 ) {
   generateMobileMenu(navListGrid);
 }
 
